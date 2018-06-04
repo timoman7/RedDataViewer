@@ -5,14 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reddit Data Viewer</title>
-    
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyA_-Qv1YXYfIMqEoaYhfsljZ_PzOb6GAt4",
+        authDomain: "imgurreddit-59dd3.firebaseapp.com",
+        databaseURL: "https://imgurreddit-59dd3.firebaseio.com",
+        projectId: "imgurreddit-59dd3",
+        storageBucket: "imgurreddit-59dd3.appspot.com",
+        messagingSenderId: "772446851764"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="./main.css">
 </head>
 <body>
     <div class="header">
-
+        <nav class="nav nav-floating nav-top nav-right">
+            <ul class="nav-ul nav-h">
+                <li class="nav-li nav-h">
+                    <a href="#" id="login" class="visible btn">Login</a>
+                </li>
+                <li class="nav-li nav-h">
+                    <a href="#" id="logout" class="hidden btn">Logout</a>
+                </li>
+                <li class="nav-li nav-h">
+                    <h1>RDV</h1>
+                </li>
+            </ul>
+        </nav>
     </div>
     <div class="container">
+        <template id="dataTemplate">
+            <span class="key"></span><br>
+            <span class="value"></span>
+        </template>
+        <template id="userTemplate">
+            <div class="user">
+                <ul>
+                    <li class="data-piece username">
+                        <span class="key"></span><br>
+                        <span class="value"></span>
+                    </li>
+                    <li class="object">
+                        <ul class="data-pieces">
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </template>
+        <div id="users">
 
+        </div>
     </div>
     <div class="footer">
 

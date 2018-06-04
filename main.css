@@ -1,0 +1,112 @@
+:root{
+    --border-size: 5px;
+    --border-radius-size: 10px;
+    --header-border-color: black;
+}
+.nav-li{
+    list-style-type: none;
+}
+.nav-ul.nav-h{
+    display: flex;
+    padding: 2px;
+    margin: 0;
+}
+.nav{
+    border: var(--header-border-color) solid var(--border-size);
+}
+.nav.nav-floating{
+    position: fixed;
+}
+.nav.nav-top.nav-left{
+    border-bottom-right-radius: var(--border-radius-size);
+}
+.nav.nav-top{
+    top: 0px;
+    border-top: none;
+}
+.nav.nav-top.nav-right{
+    border-bottom-left-radius: var(--border-radius-size);
+}
+.nav.nav-right{
+    right: 0px;
+    border-right: none;
+}
+.nav.nav-bottom.nav-right{
+    border-top-left-radius: var(--border-radius-size);
+}
+.nav.nav-bottom{
+    bottom: 0px;
+    border-bottom: none;
+}
+.nav.nav-bottom.nav-left{
+    border-top-right-radius: var(--border-radius-size);
+}
+.nav.nav-left{
+    left: 0px;
+    border-left: none;
+}
+.nav-top>.nav-ul.nav-h{
+    padding-top: var(--border-size);
+}
+.nav-right>.nav-ul.nav-h{
+    padding-right: var(--border-size);
+}
+.nav-bottom>.nav-ul.nav-h{
+    padding-bottom: var(--border-size);
+}
+.nav-left>.nav-ul.nav-h{
+    padding-left: var(--border-size);
+}
+.nav-li>*{
+    padding: 4px;
+}
+.nav-li.nav-h>*{
+    margin: auto 0;
+    vertical-align: -webkit-baseline-middle;
+}
+.nav-li.nav-h:not(:last-child)>*{
+    border-right: var(--header-border-color) solid 4px;
+}
+.btn{
+    text-decoration: none;
+    color: inherit;
+}
+.header>.nav>*{
+    font-size: 20px;
+}
+.container{
+    padding-top: var(--border-radius-size);
+}
+.visible{
+    display: inherit;
+}
+.hidden{
+    display: none;
+}
+.data-piece:not(:last-child){
+    border-bottom: var(--header-border-color) solid 5px;
+}
+li.data-piece{
+    border-left: var(--header-border-color) solid 5px;
+    padding-left: 5px; 
+}
+.object>*{
+    position: relative;
+    left: 5px;
+}
+.user li{
+    list-style: none;
+    background: whitesmoke;
+    font-size: 20px;
+}
+.user li *{
+    
+}
+.user li .key{
+    font-weight: bold;
+    color: red;
+}
+.user li .value{
+    font-weight: bold;
+    color: blue;
+}
